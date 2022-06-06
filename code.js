@@ -31,18 +31,22 @@ function clickNumberButton(){
     number = document.getElementById("inputnumber").value
   
     try{
-        if (number == '') throw 'Informe um valor';
+        if(number == ''){
+            throw 'Informe um valor'
+        }
+        else if (number < 5 || number > 10 )
+        throw 'Por favor, Informe um valor maior que 5 ou menor que 10!';
     }
-    catch(erro){
+    catch(erro) {
+        if(erro =='Por favor, Informe um valor maior que 5 ou menor que 10!' )
+        alert("Erro+erro javascript");
         document.getElementById("outputnumber").innerHTML = erro;
     }
-  
-  
-  
-  
-  
-    console.log("Number");
-
-
+    finally{
+   if(number > 5 || number <10){
+    document.getElementById('outputnumber').innerHTML
+    alert('O numero escolhido foi '+ number);
+    }
+    }
 }
 
